@@ -21,8 +21,8 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    <!--
-    TIPOS DE ESCOPOS
+
+    <!-- TIPOS DE ESCOPOS
 
      COMPILE
     -Escopo default, disponivel em todos os classpath, é transitiva.
@@ -65,6 +65,19 @@
   </dependencyManagement>
 
 -->
+    <!--DEPENDÊNCIA OPCIONAIS
+    - Retira a transitividade da dependência
+    <optional>true</optional>
+
+    -EXCLUSION
+    - Caso você já tenha ou não quer ter disponivel essa dependência.
+      <exclusions>
+        <exclusion>
+          <groupId>name-teste</groupId>
+          <artifactId>custom-dependency</artifactId>
+        </exclusion>
+      </exclusions>
+    -->
   </dependencies>
 
 </project>
