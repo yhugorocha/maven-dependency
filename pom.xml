@@ -14,5 +14,57 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <!--
+    TIPOS DE ESCOPOS
+
+     COMPILE
+    -Escopo default, disponivel em todos os classpath, é transitiva.
+    <scope>compile</scope>
+
+     PROVIDER
+    -Disponibilizada em tempo de execução (PARA COMPILAÇÃO E TESTE), mas não em runtime.
+    <scope>provider</scope>
+
+     RUNTIME
+    -Indica que a dependencia é necessaria para execução, mas não para compilação (Exemplo seria connector banco de dados).
+    <scope>runtime</scope>
+
+    TEST
+    -Somente para compilação e execução dos teste, não é transitivo.
+    <scope>test</scope>
+
+    SYSTEM
+    -Similar ao escopo provider, exceto por ser necessario prover o JAR explicitamente.
+    <dependency>
+      <groupId>name-teste</groupId>
+      <artifactId>custom-dependency</artifactId>
+      <version>1.0.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/libs/custom-dependency-1.0.0.jar</systemPath>
+    </dependency>
+
+    IMPORT
+    - È disponivel somente com dependencia do tipo pom com a tag <dependencyManagement>, indica um processo de reutilizar dependencias de um projeto.
+    <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>name-teste</groupId>
+        <artifactId>custom-dependency</artifactId>
+        <version>1.0.0</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+-->
   </dependencies>
+
 </project>
